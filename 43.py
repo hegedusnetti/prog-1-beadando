@@ -18,7 +18,7 @@ while f:
             x = atalakit(a)
             ossz += x
             print(f"{a}->{x}")
-        if ossz>1000:
+        if ossz>=1000:
             break
     except KeyError:
         print("Ha nem római számot adsz meg, nem tudunk együtt dolgozni!")
