@@ -10,8 +10,17 @@ def atalakit(a):
     return arab
 
 ossz = 0
-while ossz<1000:
-    a = input("Adjon meg egy római számot: ").upper()
-    x = atalakit(a)
-    ossz += x
-    print(f"{a}->{x}")
+f=True
+while f:
+    try:
+        while ossz<1000:
+            a = input("Adj meg egy római számot: ").upper()
+            x = atalakit(a)
+            ossz += x
+            print(f"{a}->{x}")
+        if ossz>1000:
+            break
+    except KeyError:
+        print("Ha nem római számot adsz meg, nem tudunk együtt dolgozni!")
+        f=True
+        continue
